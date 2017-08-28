@@ -1,0 +1,168 @@
+<html>
+<head>
+<style>
+.container{
+position:fixed;
+top:22.5%;
+left:37.5%;
+width:25%;
+height:55%;
+background-color:#3a3c3d;
+}
+.strtline{
+position:absolute;
+background-color:black;
+width:2px;
+height:18%;
+border-radius:10px;
+border: 3px solid black;
+box-shadow: 1px -1px 12px #888888;
+}
+
+.e{position:relative;
+width:20%;
+height:100%;
+left:15%;
+background-color:transparent;
+ }
+
+
+.strtline#es{animation:neon 6s 2s   forwards ; 
+}
+.strtline#e1{animation:neon 5s 5s  forwards; 
+}
+.strtline#e2{animation:neon 4s 2.6s  forwards; 
+}
+.strtline#e3{animation:neon 7s 3.4s  forwards; 
+}
+.strtline#ns1{animation:neon 6s 1.2s  forwards; 
+}
+.strtline#ns2{animation:neon 6s 4s  forwards; 
+}
+.strtline#nd{animation:neon 8s 4.3s  forwards; 
+}
+.strtline#d1{animation:neon 3s 3.8s  forwards; 
+}
+.strtline#d2{animation:neon 6s 1.8s  forwards; 
+}
+.strtline#ds{animation:neon 6s 1.8s  forwards; 
+}
+
+/**/
+/*.strtline#e1{ animation:neon .15s 2s 2;}
+.strtline#e2{ animation:neon .15s 2s 2;}
+.strtline#e3{ animation:neon .15s 2s 2;}
+.strtline#e4{ animation:neon .15s 2s 2;}*/
+.n{display:inline-block;
+position:absolute;
+width:20%;
+height:100%;
+left:35%;
+top:0;
+background-color:transparent;}
+
+.d {display:inline-block;
+position:absolute;
+width:20%;
+height:100%;
+left:55%;
+top:0;
+background-color:transparent;
+}
+
+#es{
+top:30%;
+left:20%;}
+#e1{
+transform:rotate(90deg);
+height:10%;
+top:25.3%;
+left:58%;
+}
+#e2{
+transform:rotate(90deg);
+height:9%;
+top:34.5%;
+left:55%;}
+#e3{
+transform:rotate(90deg);
+height:10%;
+top:42.3%;
+left:58%;}
+#ns1{
+top:30%;
+left:20%;}
+#nd{
+transform:rotate(-30deg);
+height:20%;
+top:29%;
+left:55%;}
+#ns2{
+top:30%;
+left:91%;}
+#ds{
+position;absolute;
+left:20%;
+top:30%;
+z-index: 3;}
+#d1{
+position:absolute;
+height:12%;
+transform:rotate(45deg);
+top:38.2%;
+left:53%;
+
+}   
+#d2{
+position:absolute;
+height:12%;
+transform:rotate(-45deg);
+top:28.2%;
+left:53%
+}   
+@keyframes neon{
+  0%,1.5%,3.1%,97%,95%,97%{
+  border-color:  black;
+  
+  }
+  .8%,2.2%,4%,20%,40%,60%,80%,96%,94%,98%{
+  border-color:  red;
+  }
+  100%{
+    border-color: black;
+ 
+}
+
+/*@keyframes revneon{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}*/
+
+
+</style>
+</head>
+<body>
+<div class="container">
+ <section class="e">
+   <div class="strtline srt" id="es"></div>
+   <div class="strtline" id="e1"></div>
+   <div class="strtline" id="e2"></div>
+   <div class="strtline" id="e3"></div>
+ </section>
+  <section class="n">
+   <div class="strtline" id="ns1"></div>
+   <div class="strtline" id="nd"></div>
+   <div class="strtline" id="ns2"></div>
+ </section>
+<section class="d">
+    <div class="strtline" id="ds"></div>
+   <div  class="strtline" id="d1"></div>
+    <div  class="strtline" id="d2"></div>
+</section>
+</div>
+</body>
+</html>

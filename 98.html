@@ -1,0 +1,523 @@
+
+<html>
+<head>
+    <style type="text/css">
+    .container{
+        width:30vw;
+        height:65vh;
+        position:absolute;
+        top:20%;
+        left:32%;
+        background-color: #455268;
+        border:5px solid black;
+        border-radius: 3px; 
+        overflow: hidden;
+    }
+
+    .wraper{
+        position: absolute;
+        top:26.25%;
+        left: 24.5%;
+        background-color: transparent;
+        width: 49%;
+        height: 46.5%;
+    }
+    .triangle{
+        width: 0;
+        height: 0;
+        position: absolute;
+        z-index: 5;
+     }
+  
+    
+    .t{
+        top:0;
+        left: 0;
+         border-style: solid;
+        border-width:100px 100px 0 100px;
+        border-color: #109ea8 transparent transparent transparent;
+        animation: top 2s cubic-bezier(.16,.69,.4,1) 1s infinite alternate;  
+    }
+    .r{
+        top:0;
+        left: 50%;
+         border-style: solid;
+        border-width: 100px 100px 100px 0;
+        border-color: transparent #109ea8 transparent transparent;
+        animation: right 2s cubic-bezier(.16,.69,.4,1) 1s infinite alternate;  
+  
+    }
+    .b{
+        top:50%;
+        left: 0;
+         border-style: solid;
+        border-width: 0 100px 100px  100px;
+        border-color:  transparent transparent #109ea8 transparent ; 
+        animation: bottom 2s cubic-bezier(.16,.69,.4,1) 1s infinite alternate;  
+ 
+    }
+    .l{
+        top:0;
+        left: 0;
+         border-style: solid;
+        border-width:100px 0 100px 100px;
+        border-color:  transparent transparent  transparent #109ea8;
+    animation: left 2s cubic-bezier(.16,.69,.4,1) 1s infinite alternate;  
+    }
+    .objects{
+        position: absolute;
+        width: 10%;
+        height: 10%;
+        top: 45%;
+        left: 45%;
+        background-color: transparent;
+        z-index: 2;
+
+    }
+    .tiny_square1{
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        background-color: #b77e0c;
+        }
+    .tiny_square2{
+        position: absolute;
+        top:90%;
+        left:40%;
+        width: 12px;
+        height: 12px;
+        background-color: #870823;
+    }
+    .tiny_square3{
+        position: absolute;width: 12px;
+        top:10%;
+        left:90%;
+        width: 12px;
+        height: 12px;
+        background-color: #3bbaad;
+    }
+    .tiny_square4{
+        position: absolute;
+        top: 70%;
+        left: 10%;
+        width: 12px;
+        height: 12px;
+        background-color: #5c6350;
+    }
+    .tiny_circle1{
+        position: absolute;
+        top:10%;
+        left: 15%;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 2px solid #7439a0;    
+    }
+      .tiny_circle2{
+        position: absolute;
+        top:30%;
+        left: 35%;width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        border: 3px solid #3bbaad;    
+    }
+      .tiny_circle3{
+        position: absolute;
+        top:80%;
+        left: 15%;width: 7.5px;
+        height: 7.5px;
+        border-radius: 50%;
+        border: 2.5px solid #870823 ;    
+    }
+      .tiny_circle4{
+        position: absolute;
+        top:10%;
+        left: 15%;width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 3px solid #5c6350;    
+    }
+    .s11{
+            animation: square11 2s cubic-bezier(.52,.19,.3,1) 1s infinite alternate;    
+    }
+    .s12{
+            animation: square12 2s cubic-bezier(.52,.19,.3,1) 1s infinite alternate;
+    }
+    .s21{   animation: square21 2s cubic-bezier(.52,.19,.3,1) 1s infinite alternate;
+    }
+    .s22{  animation: square22 2s cubic-bezier(.52,.19,.3,1) 1s infinite alternate;
+    }
+    .s31{   animation: square31 2s cubic-bezier(.52,.19,.3,1) 1s infinite alternate;
+    }
+    .s32{   animation: square32 2s cubic-bezier(.52,.19,.3,1) 1s infinite alternate;
+
+    }
+    .s41{   animation: square41 2s cubic-bezier(.52,.19,.3,1) 1s infinite alternate;
+    }
+    .s42{   animation: square42 2s cubic-bezier(.52,.19,.3,1) 1s infinite alternate;
+
+    }
+    .c11{
+            animation: circle11 2s cubic-bezier(.52,.19,.3,1) 1s infinite alternate;    
+    }
+    .c12{
+            animation: circle12 2s cubic-bezier(.52,.19,.3,1) 1s infinite alternate;
+    }
+    .c21{   animation: circle21 2s cubic-bezier(.52,.19,.3,1) 1s infinite alternate;
+    }
+    .c22{   animation: circle22 2s cubic-bezier(.52,.19,.3,1) 1s infinite alternate;
+    }
+    .c31{   animation: circle31 2s cubic-bezier(.52,.19,.3,1) 1s infinite alternate;
+    }
+    .c32{   animation: circle32 2s cubic-bezier(.52,.19,.3,1) 1s infinite alternate;
+
+    }
+    .c41{   animation: circle41 2s cubic-bezier(.52,.19,.3,1) 1s infinite alternate;
+    }
+    .c42{   animation: circle42 2s cubic-bezier(.52,.19,.3,1) 1s infinite alternate;
+
+    }
+   /* .tiny_circle2{
+        position: absolute;
+        top:50%;
+        left:40%;
+        width: 12px;
+        height: 12px;
+        background-color: #870823;
+    }
+    .tiny_circle3{
+        position: absolute;width: 12px;
+        top:10%;
+        left:90%;
+        width: 12px;
+        height: 12px;
+        background-color: #3bbaad;
+    }
+    .tiny_circle4{
+        position: absolute;
+        top: 70%;
+        left: 10%;
+        width: 12px;
+        height: 12px;
+        background-color: #5c6350;
+    }*/
+   /* .big
+   /* .big0{
+        width: 8px;
+        height: 8px;
+    }
+     .big1{
+        width: 12px;
+        height: 12px;
+    }
+     .big2{
+        width: 14px;
+        height: 14px;
+    }
+    .bigger{
+        width: 16px;
+        height: 16px;
+    }
+    .biggest{
+        width: 18px;
+        height: 18px;
+    }
+    */
+
+    @keyframes top{
+    0%, 20% { 
+        transform: translateX(0);
+    }
+    100% { 
+        transform:  translateY(-180px);
+    }
+}
+    @keyframes right{
+    0%, 20% {
+        transform:  translateY(0);
+    }
+    100% {
+        transform:  translateX(180px);
+    }
+}
+    @keyframes bottom{
+    0%, 20% {
+        transform:  translateX(0);
+    }
+    100% {
+        transform:  translateY(180px);
+    }
+}
+    @keyframes left{
+    0%, 20% {
+        transform:  translateY(0);
+    }
+    100% {
+        transform:  translateX(-180px);
+    }
+}
+
+@keyframes square11{
+    0%{ transform: scale(.3);
+        opacity: 0;
+        left:20%;
+        top:0;
+    }
+
+    100%{
+        transform: scale(3.5) rotate(145deg);
+        opacity: 1;
+        left:320%;
+        top:90%;
+    } 
+} 
+
+@keyframes square12{
+    0%{ transform: scale(.3);
+        opacity: 0;        
+        top:27%;
+        left: 40%;  
+    }
+
+    100%{
+        transform: scale(1.5) rotate(145deg);
+        opacity: 1;
+        left:-120%;
+        top:-80%;
+    } 
+}                                                                              
+@keyframes square21{
+    0%{ transform: scale(.8);
+        opacity: 0;
+            }
+
+    100%{
+        transform: scale(1.5) rotate(-90deg);
+        opacity: 1;
+        left:-80%;
+        top: 350%;
+    } 
+}
+@keyframes square22{
+    0%{ transform: scale(1);
+        opacity: 0;
+            }
+
+    100%{
+        transform: scale(1.8) rotate(-15deg);
+        opacity: 1;
+        left:-20%;
+        top: -350%;
+    } 
+}
+@keyframes square31{
+    0%{ transform: scale(.8);
+        opacity: 0;
+            }
+
+    100%{
+        transform: scale(2.5) rotate(-100deg);
+        opacity: 1;
+        left:200%;
+        top: -180%;
+    } 
+}
+@keyframes square32{
+    0%{ transform: scale(1);
+        opacity: 0;
+            }
+
+    100%{
+        transform: scale(1) rotate(15deg);
+        opacity: 1;
+        left:-200%;
+        top: 150%;
+    } 
+}
+@keyframes square41{
+    0%{ transform: scale(.3);
+        opacity: 0;
+            }
+
+    100%{
+        transform: scale(1.25) rotate(90deg);
+        opacity: 1;
+        left:120%;
+        top: 60%;
+    } 
+}
+@keyframes square42{
+    0%{ transform: scale(.9);
+        opacity: 0;
+            }
+
+    100%{
+        transform: scale(2.2) rotate(-15deg);
+        opacity: 1;
+        left:0%;
+        top: 270%;
+    } 
+}
+
+
+@keyframes circle11{
+    0%{ transform: scale(.3);
+        opacity: 0;
+        left:0;
+        top:0;
+    }
+
+    100%{
+        transform: scale(2.83) rotate(365deg);
+        opacity: 1;
+        left:20%;
+        top:-40%;
+    } 
+} 
+
+@keyframes circle12{
+    0%{ transform: scale(1);
+        opacity: 0;        
+        top:47%;
+        left: 100%;  
+    }
+
+    100%{
+        transform: scale(1.5) rotate(145deg);
+        opacity: 1;
+        left:-280%;
+        top:30%;
+    } 
+}                                                                              
+@keyframes circle21{
+    0%{ transform: scale(.8);
+        opacity: 0;
+            }
+
+    100%{
+        transform: scale(1.8) rotate(-15deg);
+        opacity: 1;
+        left:450%;
+        top: 350%;
+    } 
+}
+@keyframes circle22{
+    0%{ transform: scale(1);
+        opacity: 0;
+            }
+
+    100%{
+        transform: scale(1.8) rotate(-15deg);
+        opacity: 1;
+        left:-220%;
+        top: 310%;
+    } 
+}
+@keyframes circle31{
+    0%{ transform: scale(.8);
+        opacity: 0;
+            }
+
+    100%{
+        transform: scale(1.6) rotate(-15deg);
+        opacity: 1;
+        left:200%;
+        top: -100%;
+    } 
+}
+@keyframes circle32{
+    0%{ transform: scale(1);
+        opacity: 0;
+            }
+
+    100%{
+        transform: scale(1) rotate(-15deg);
+        opacity: 1;
+        left:-100%;
+        top: 50%;
+    } 
+}
+@keyframes circle41{
+    0%{ transform: scale(.3);
+        opacity: 0;
+            }
+
+    100%{
+        transform: scale(1.8) rotate(-15deg);
+        opacity: 1;
+        left:300%;
+        top: -400%;
+    } 
+}
+@keyframes circle42{
+    0%{ transform: scale(.6);
+        opacity: 0;
+            }
+
+    100%{
+        transform: scale(1.1) rotate(-15deg);
+        opacity: 1;
+        left:170%;
+        top: 180%;
+    } 
+}
+/*@keyframes square3{
+    0%{ transform: scale(.5);
+        opacity: 0;
+        left:20%;
+    }
+
+    100%{
+        transform: scale(3.5) rotate(145deg);
+        opacity: 1;
+        left:120%;
+    } 
+}
+@keyframes square4{
+    0%{ transform: scale(.5);
+        opacity: 0;
+        left:20%;
+    }
+
+    100%{
+        transform: scale(3.5) rotate(145deg);
+        opacity: 1;
+        left:120%;
+    } 
+}*/
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="wraper">
+            <div class="triangle t"></div>
+            <div class="triangle r"></div> 
+            <div class="triangle b"></div>
+            <div class="triangle l"></div>
+        </div>
+
+        <div class="objects">
+            <div class="tiny_square4 s41"></div>
+            <div class="tiny_square2 s21"></div>
+            <div class="tiny_square2 s22"></div>
+            <div class="tiny_square1 s11"></div>
+            <div class="tiny_square4 s42" ></div>
+            <div class="tiny_square3 s31" ></div>
+            <div class="tiny_square3 s32"></div>
+            <div class="tiny_square1 s12" ></div>
+
+            <div class="tiny_circle1 c11"></div>
+            <div class="tiny_circle1 c12"></div>
+            <div class="tiny_circle2 c21"></div>
+            <div class="tiny_circle2 c22"></div>
+            <div class="tiny_circle3 c31"></div>
+            <div class="tiny_circle3 c32"></div>
+            <div class="tiny_circle4 c41"></div>
+            <div class="tiny_circle4 c42"></div>
+        </div>
+
+    </div>
